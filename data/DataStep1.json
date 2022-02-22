@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Indiquez la pose",
+    "options": [
+      {
+        "label": "Livré Sans Coffre",
+        "image": "assets/img/id1.png",
+        "id": 1
+      },
+      {
+        "label": "Coffre Aluminium",
+        "image": "assets/img/id2.png",
+        "id": 2
+      },
+      {
+        "label": "Coffre-Aluminium",
+        "image": "assets/img/id3.png",
+        "id": 3
+      },
+      {
+        "label": "Livré Sans-Coffre",
+        "image": "assets/img/id4.png",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "title": "Choisissez la matière des lames",
+    "options": [
+      {
+        "label": "Lames Aluminium",
+
+        "id": 1
+      },
+      {
+        "label": "Lames PVC",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "title": "Choisissez le coloris du volet roulant",
+    "options": [
+      {
+        "label": "Blanc",
+        "image": "assets/img/couleur_blanc.png",
+        "id": 1
+      },
+      {
+        "label": "Gris",
+        "image": "assets/img/couleur_gris.png",
+        "id": 2
+      },
+      {
+        "label": "Bois",
+        "image": "assets/img/couleur_bois.png",
+        "id": 3
+      },
+      {
+        "label": "Beige",
+        "image": "assets/img/couleur_beige.png",
+        "id": 4
+      },
+      {
+        "label": "Brun",
+        "image": "assets/img/couleur_brun.png",
+        "id": 5
+      }
+    ]
+  }
+]

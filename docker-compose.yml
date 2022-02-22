@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+ store2000-simulator-nextjs:
+   container_name: store2000-simulator-nextjs
+   build:
+     context: .
+     dockerfile: Dockerfile.prod
+   
+   environment:
+     - CHOKIDAR_USEPOLLING=true
+     - VIRTUAL_HOST=simulateur.store2000.fr,www.simulateur.store2000.fr
+     - LETSENCRYPT_HOST=simulateur.store2000.fr,www.simulateur.store2000.fr
+     - LETSENCRYPT_EMAIL=ghassenmeliane@gmail.com
+     - VIRTUAL_PORT=3000
+   ports:
+     - 5073:3000
+
+networks:
+  default:
+    external:
+      name: webproxy

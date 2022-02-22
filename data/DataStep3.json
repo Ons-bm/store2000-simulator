@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Choisissez le côté de manœuvre",
+    "options": [
+      {
+        "label": "Droite",
+        "id": 1
+      },
+      {
+        "label": "Gauche",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "title": "Choisissez le type de coffre",
+    "options": [
+      {
+        "label": "Forme PAN Coupe 45%",
+        "image": "assets/img/pan-bois.png",
+        "id": 1
+      },
+      {
+        "label": "Forme QUART De Rond",
+        "image": "assets/img/rond-bois.png",
+        "id": 2
+      }
+    ]
+  },
+  {
+    "title": "Livraison",
+    "options": [
+      {
+        "label": "Sans Livraison",
+        "id": 1
+      },
+      {
+        "label": "Avec livraison",
+        "id": 2
+      }
+    ]
+  }
+]

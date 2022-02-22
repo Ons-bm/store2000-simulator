@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Choisissez la manoeuvre",
+    "options": [
+      {
+        "label": "A Sangle",
+        "image": "assets/img/sangle.jpg",
+        "id": 1
+      },
+      {
+        "label": "Tirage",
+        "image": "assets/img/tirage.jpg",
+        "id": 2
+      },
+      {
+        "label": "Manivelle",
+        "image": "assets/img/manivelle.jpg",
+        "id": 3
+      },
+      {
+        "label": "Electrique",
+        "image": "assets/img/electrique-1.jpg",
+        "id": 4
+      },
+      {
+        "label": "Radio",
+        "image": "assets/img/radio-1.jpg",
+        "id": 5
+      },
+      {
+        "label": "Connecté IO",
+        "image": "assets/img/connecte_io.jpg",
+        "id": 6
+      }
+    ]
+  }
+]

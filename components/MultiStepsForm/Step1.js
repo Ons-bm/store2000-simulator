@@ -1,9 +1,13 @@
+import { useState } from "react";
 import data from "../../data/DataStep1.json";
 import Buttons from "../inputs/Button/Buttons";
 import ProgressBar from "../inputs/ProgressBar";
 import RadioInput from "../inputs/RadioInput/RadioInput";
 
-export default function Step1({ setTabActive }) {
+export default function Step1({ setTabActive, setFinalData, finalData }) {
+  const [pose, setPose] = useState();
+  const [lame, setLame] = useState();
+  const [color, setColor] = useState();
   return (
     <>
       <div
@@ -16,13 +20,33 @@ export default function Step1({ setTabActive }) {
               <div className="step-inner-content">
                 <ProgressBar step={1} />
                 <h2>Détails pose/couleur</h2>
-                {data.map((data, id) => (
-                  <RadioInput key={id} data={data} />
-                ))}
+                <RadioInput
+                  data={data[0]}
+                  setResultData={setPose}
+                  key={data[0].title}
+                />
+
+                <RadioInput
+                  data={data[1]}
+                  setResultData={setLame}
+                  key={data[1].title}
+                />
+
+                <RadioInput
+                  data={data[2]}
+                  setResultData={setColor}
+                  key={data[2].title}
+                />
               </div>
             </div>
           </div>
-          <Buttons step={1} setTabActive={setTabActive} />
+          <Buttons
+            step={1}
+            setTabActive={setTabActive}
+            setFinalData={setFinalData}
+            finalData={finalData}
+            resultData={[pose, lame, color]}
+          />
         </div>
       </div>
     </>

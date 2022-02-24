@@ -29,6 +29,8 @@ const CheckInput = ({ data }) => {
     }
     setActiveOption(tabAO);
   };
+
+  console.log(tabAO);
   return (
     <>
       <div className="budget-area">

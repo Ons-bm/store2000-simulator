@@ -1,4 +1,7 @@
-const TextInput = ({ title, placeholder }) => {
+const TextInput = ({ title, placeholder, setResultData }) => {
+  const handleChange = (e) => {
+    setResultData(`${title} : ${e.target.value}`);
+  };
   return (
     <div className="row">
       <div className="col-md-12 form-inner-area">
@@ -14,6 +17,7 @@ const TextInput = ({ title, placeholder }) => {
           className="form-control"
           minLength={2}
           placeholder={placeholder ?? ""}
+          onChange={handleChange}
         />
       </div>
     </div>

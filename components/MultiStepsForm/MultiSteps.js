@@ -3,12 +3,37 @@ import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
 
-export default function MultiSteps({ tabActive, setTabActive }) {
+export default function MultiSteps({
+  tabActive,
+  setTabActive,
+  setFinalData,
+  finalData,
+}) {
   const steps = [
-    <Step1 key={tabActive} setTabActive={setTabActive} />,
-    <Step2 key={tabActive} setTabActive={setTabActive} />,
-    <Step3 key={tabActive} setTabActive={setTabActive} />,
-    <Step4 key={tabActive} setTabActive={setTabActive} />,
+    <Step1
+      key={tabActive}
+      setTabActive={setTabActive}
+      setFinalData={setFinalData}
+      finalData={finalData}
+    />,
+    <Step2
+      key={tabActive}
+      setTabActive={setTabActive}
+      setFinalData={setFinalData}
+      finalData={finalData}
+    />,
+    <Step3
+      key={tabActive}
+      setTabActive={setTabActive}
+      setFinalData={setFinalData}
+      finalData={finalData}
+    />,
+    <Step4
+      key={tabActive}
+      setTabActive={setTabActive}
+      setFinalData={setFinalData}
+      finalData={finalData}
+    />,
   ];
   return (
     <>

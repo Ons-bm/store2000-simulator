@@ -5,22 +5,26 @@
       {
         "label": "Livré Sans Coffre",
         "image": "assets/img/id1.png",
-        "id": 1
+        "id": 1,
+        "price": 2.0
       },
       {
         "label": "Coffre Aluminium",
         "image": "assets/img/id2.png",
-        "id": 2
+        "id": 2,
+        "price": 2.0
       },
       {
         "label": "Coffre-Aluminium",
         "image": "assets/img/id3.png",
-        "id": 3
+        "id": 3,
+        "price": 2.0
       },
       {
         "label": "Livré Sans-Coffre",
         "image": "assets/img/id4.png",
-        "id": 4
+        "id": 4,
+        "price": 2.0
       }
     ]
   },
@@ -30,11 +34,13 @@
       {
         "label": "Lames Aluminium",
 
-        "id": 1
+        "id": 1,
+        "price": 2.0
       },
       {
         "label": "Lames PVC",
-        "id": 2
+        "id": 2,
+        "price": 2.0
       }
     ]
   },
@@ -44,27 +50,32 @@
       {
         "label": "Blanc",
         "image": "assets/img/couleur_blanc.png",
-        "id": 1
+        "id": 1,
+        "price": 2.0
       },
       {
         "label": "Gris",
         "image": "assets/img/couleur_gris.png",
-        "id": 2
+        "id": 2,
+        "price": 2.0
       },
       {
         "label": "Bois",
         "image": "assets/img/couleur_bois.png",
-        "id": 3
+        "id": 3,
+        "price": 2.0
       },
       {
         "label": "Beige",
         "image": "assets/img/couleur_beige.png",
-        "id": 4
+        "id": 4,
+        "price": 2.0
       },
       {
         "label": "Brun",
         "image": "assets/img/couleur_brun.png",
-        "id": 5
+        "id": 5,
+        "price": 2.0
       }
     ]
   }

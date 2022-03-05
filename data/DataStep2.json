@@ -24,11 +24,11 @@
         "marque": {
           "options": [
             {
-              "label": "Tirage",
+              "label": "AOK",
               "id": 1
             },
             {
-              "label": "A sangle",
+              "label": "Somfy",
               "id": 2
             }
           ]
@@ -39,13 +39,15 @@
         "image": "assets/img/radio-1.jpg",
         "id": 5,
         "marque": {
+          "title": "Choisissez la marque",
+
           "options": [
             {
-              "label": "Tirage",
+              "label": "AOK",
               "id": 1
             },
             {
-              "label": "A sangle",
+              "label": "Somfy",
               "id": 2
             }
           ]

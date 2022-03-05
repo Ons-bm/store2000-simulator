@@ -5,8 +5,23 @@ import ProgressBar from "../inputs/ProgressBar";
 import { useState } from "react";
 
 export default function Step2({ setTabActive, setFinalData, finalData }) {
-  const [manoeuvre, setManoeuvre] = useState();
+  const [manoeuvre, setManoeuvre] = useState("");
+  const [marqueManoeuvre, setMarqueManoeuvre] = useState("");
+  const marque = {
+    title: "Choisissez la marque",
 
+    options: [
+      {
+        label: "AOK",
+        id: 1,
+      },
+      {
+        label: "Somfy",
+        id: 2,
+      },
+    ],
+  };
+  console.log(manoeuvre.includes("Radio"));
   return (
     <>
       <div
@@ -26,6 +41,13 @@ export default function Step2({ setTabActive, setFinalData, finalData }) {
                     setResultData={setManoeuvre}
                   />
                 ))}
+                {manoeuvre.includes("Radio") ||
+                manoeuvre.includes("Electrique") ? (
+                  <RadioInput
+                    data={marque}
+                    setResultData={setMarqueManoeuvre}
+                  />
+                ) : null}
               </div>
             </div>
           </div>
@@ -33,7 +55,7 @@ export default function Step2({ setTabActive, setFinalData, finalData }) {
             step="2"
             setTabActive={setTabActive}
             setFinalData={setFinalData}
-            resultData={[manoeuvre]}
+            resultData={[manoeuvre, marqueManoeuvre]}
             finalData={finalData}
           />
         </div>

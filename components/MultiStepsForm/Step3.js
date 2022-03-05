@@ -13,7 +13,8 @@ export default function Step3({ setTabActive, setFinalData, finalData }) {
   const [quantity, setQuantity] = useState("");
   const [delivery, setDelivery] = useState("");
   const [coffre, setCoffre] = useState("");
-  const [security, setSecurity] = useState("");
+  const manoeuvre = ["Tirage", "Radio", "Connecté IO"];
+  const typeCoffre = ["Livré Sans-Coffre", "Livré Sans Coffre"];
 
   return (
     <>
@@ -27,8 +28,13 @@ export default function Step3({ setTabActive, setFinalData, finalData }) {
               <div className="step-inner-content">
                 <ProgressBar step={3} />
                 <h2>Détails Dimensions</h2>
-
-                <SelectInput data={data[0]} setResultData={setSide} />
+                <div
+                  hidden={manoeuvre.includes(
+                    finalData[4].substring(finalData[4].indexOf(":") + 2)
+                  )}
+                >
+                  <SelectInput data={data[0]} setResultData={setSide} />
+                </div>
                 <h3>Dimensions en mm</h3>
                 <TextInput
                   title="Largeur (mm) "
@@ -45,11 +51,17 @@ export default function Step3({ setTabActive, setFinalData, finalData }) {
                   placeholder="1"
                   setResultData={setQuantity}
                 />
-                <RadioInput
-                  key={data[1].title}
-                  data={data[1]}
-                  setResultData={setCoffre}
-                />
+                <div
+                  hidden={typeCoffre.includes(
+                    finalData[1].substring(finalData[1].indexOf(":") + 2)
+                  )}
+                >
+                  <RadioInput
+                    key={data[1].title}
+                    data={data[1]}
+                    setResultData={setCoffre}
+                  />
+                </div>
                 <RadioInput data={data[2]} setResultData={setDelivery} />
               </div>
             </div>
@@ -58,15 +70,7 @@ export default function Step3({ setTabActive, setFinalData, finalData }) {
             step="3"
             setTabActive={setTabActive}
             setFinalData={setFinalData}
-            resultData={[
-              side,
-              height,
-              width,
-              coffre,
-              quantity,
-              delivery,
-              security,
-            ]}
+            resultData={[side, height, width, coffre, quantity, delivery]}
             finalData={finalData}
           />
         </div>

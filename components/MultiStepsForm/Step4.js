@@ -25,27 +25,27 @@ export default function Step4({ setTabActive, setFinalData, finalData }) {
 
                 <TextInput
                   title="Nom"
-                  placeholder="1000"
+                  placeholder="Nom"
                   setResultData={setLastName}
                 />
                 <TextInput
                   title="Prénom"
-                  placeholder="1000"
+                  placeholder="Prénom"
                   setResultData={setFisrtName}
                 />
                 <TextInput
                   title="Adresse"
-                  placeholder="1000"
+                  placeholder="Adresse"
                   setResultData={setAddress}
                 />
                 <TextInput
                   title="Téléphone"
-                  placeholder="1000"
+                  placeholder="Téléphone"
                   setResultData={setPhone}
                 />
                 <TextInput
                   title="E-mail"
-                  placeholder="1000"
+                  placeholder="E-mail"
                   setResultData={setEmail}
                 />
               </div>

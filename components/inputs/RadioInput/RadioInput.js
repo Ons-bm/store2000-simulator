@@ -4,10 +4,9 @@ import SingleOption from "./SingleOption/SingleOption";
 
 const RadioInput = ({ data, setResultData }) => {
   const { title, options } = data;
-  const [activeOption, setActiveOption] = useState(0);
+  const [activeOption, setActiveOption] = useState(data.options[0].label);
   const [conditional, setConditional] = useState(false);
   setResultData(`${title} : ${activeOption}`);
-
   return (
     <>
       {title ? <p>{title}</p> : null}
@@ -30,6 +29,7 @@ const RadioInput = ({ data, setResultData }) => {
             : null}
         </div>
       </div>
+
       <Conditional data={conditional} />
     </>
   );

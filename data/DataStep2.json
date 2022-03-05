@@ -20,12 +20,36 @@
       {
         "label": "Electrique",
         "image": "assets/img/electrique-1.jpg",
-        "id": 4
+        "id": 4,
+        "marque": {
+          "options": [
+            {
+              "label": "Tirage",
+              "id": 1
+            },
+            {
+              "label": "A sangle",
+              "id": 2
+            }
+          ]
+        }
       },
       {
         "label": "Radio",
         "image": "assets/img/radio-1.jpg",
-        "id": 5
+        "id": 5,
+        "marque": {
+          "options": [
+            {
+              "label": "Tirage",
+              "id": 1
+            },
+            {
+              "label": "A sangle",
+              "id": 2
+            }
+          ]
+        }
       },
       {
         "label": "Connecté IO",

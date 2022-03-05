@@ -3,7 +3,11 @@ export default function StepsArea({ tabActive, setTabActive }) {
     <>
       <div className="steps-area steps-area-fixed">
         <div className="image-holder">
-          <img src="assets/img/side-img.jpg" alt="" />
+          <img
+            src="assets/img/side-img.jpg"
+            alt=""
+            style={{ height: "670px" }}
+          />
         </div>
         <div className="steps clearfix">
           <ul className="tablist multisteps-form__progress">
@@ -32,8 +36,8 @@ export default function StepsArea({ tabActive, setTabActive }) {
               <span>3</span>
             </li>
             <li
-              className={`multisteps-form__progress-btn ${
-                tabActive == 3 ? "js-active current" : ""
+              className={`multisteps-form__progress-btn  last${
+                tabActive == 3 ? "js-active last current" : ""
               }`}
               onClick={() => setTabActive(3)}
             >

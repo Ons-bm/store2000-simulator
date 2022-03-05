@@ -1,8 +1,7 @@
 import { SMTPClient } from "emailjs";
 
 export default function handler(req, res) {
-  const { email, result } = req.body;
-
+  const { email, emailMsg } = req.body;
   const client = new SMTPClient({
     user: "onesbm7@gmail.com",
     password: "52684942",
@@ -12,7 +11,7 @@ export default function handler(req, res) {
 
   try {
     client.send({
-      text: result,
+      text: emailMsg + "\n" + "TOTAL TTC LIVRE : 267.05€",
       from: "onesbm7@gmail.com",
       to: email,
       subject: "Devis volet roulant",

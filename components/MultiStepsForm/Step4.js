@@ -1,7 +1,9 @@
 import Buttons from "../inputs/Button/Buttons";
 import TextInput from "../inputs/TextInput";
 import ProgressBar from "../inputs/ProgressBar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import data1 from "../../data/DataStep1.json";
+import data2 from "../../data/DataStep2.json";
 
 export default function Step4({ setTabActive, setFinalData, finalData }) {
   const [firstName, setFisrtName] = useState("");
@@ -9,6 +11,90 @@ export default function Step4({ setTabActive, setFinalData, finalData }) {
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [price, setPrice] = useState(0);
+
+  // const CalculDevis = (finalData, price, setPrice) => {
+  //   for (let index = 0; index < 3; index++) {
+  //     setPrice(
+  //       price +
+  //         Number(
+  //           data1[index].options.find(
+  //             (o) =>
+  //               o.label ==
+  //               finalData[index + 1].substring(
+  //                 finalData[index + 1].indexOf(":") + 2
+  //               )
+  //           ).price
+  //         )
+  //     );
+  //   }
+
+  //   setPrice(
+  //     price +
+  //       Number(
+  //         data2[0].options.find(
+  //           (o) =>
+  //             o.label == finalData[4].substring(finalData[4].indexOf(":") + 2)
+  //         ).price
+  //       )
+  //   );
+  //   finalData[11].substring(finalData[11].indexOf(":") + 2) == "Avec livraison"
+  //     ? setPrice(price + 15.0)
+  //     : null;
+  //   finalData[10].substring(finalData[10].indexOf(":") + 2)
+  //     ? setPrice(
+  //         price *
+  //           Number(finalData[10].substring(finalData[10].indexOf(":") + 2))
+  //       )
+  //     : null;
+  //   console.log(price);
+  //   return price;
+  // };
+
+  useEffect(() => {
+    console.log("I Only run once (When the component gets mounted)");
+    for (let index = 0; index < 3; index++) {
+      price +
+        Number(
+          data1[index].options.find(
+            (o) =>
+              o.label ==
+              finalData[index + 1].substring(
+                finalData[index + 1].indexOf(":") + 2
+              )
+          ).price
+        );
+    }
+
+    price +
+      Number(
+        data2[0].options.find(
+          (o) =>
+            o.label == finalData[4].substring(finalData[4].indexOf(":") + 2)
+        ).price
+      );
+
+    // finalData[11].substring(finalData[11].indexOf(":") + 2) == "Avec livraison"
+    //   ? setPrice(price + 15.0)
+    //   : null;
+    // finalData[10].substring(finalData[10].indexOf(":") + 2)
+    //   ? setPrice(
+    //       price *
+    //         Number(finalData[10].substring(finalData[10].indexOf(":") + 2))
+    //     )
+    //   : null;
+    console.log(
+      price +
+        Number(
+          data2[0].options.find(
+            (o) =>
+              o.label == finalData[4].substring(finalData[4].indexOf(":") + 2)
+          ).price
+        )
+    );
+    const totalPrice = `TOTAL TTC LIVRE : ${price} €`;
+    console.log(totalPrice);
+  }, [finalData]);
 
   return (
     <>

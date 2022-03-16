@@ -5,58 +5,38 @@
       {
         "label": "A Sangle",
         "image": "assets/img/sangle.jpg",
-        "id": 1
+        "id": 1,
+        "price": 5.0
       },
       {
         "label": "Tirage",
         "image": "assets/img/tirage.jpg",
-        "id": 2
+        "id": 2,
+        "price": 5.0
       },
       {
         "label": "Manivelle",
         "image": "assets/img/manivelle.jpg",
-        "id": 3
+        "id": 3,
+        "price": 5.0
       },
       {
         "label": "Electrique",
         "image": "assets/img/electrique-1.jpg",
         "id": 4,
-        "marque": {
-          "options": [
-            {
-              "label": "AOK",
-              "id": 1
-            },
-            {
-              "label": "Somfy",
-              "id": 2
-            }
-          ]
-        }
+        "price": 5.0
       },
       {
         "label": "Radio",
         "image": "assets/img/radio-1.jpg",
         "id": 5,
-        "marque": {
-          "title": "Choisissez la marque",
-
-          "options": [
-            {
-              "label": "AOK",
-              "id": 1
-            },
-            {
-              "label": "Somfy",
-              "id": 2
-            }
-          ]
-        }
+        "price": 5.0
       },
       {
         "label": "Connecté IO",
         "image": "assets/img/connecte_io.jpg",
-        "id": 6
+        "id": 6,
+        "price": 5.0
       }
     ]
   }

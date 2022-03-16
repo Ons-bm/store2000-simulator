@@ -32,11 +32,13 @@
     "options": [
       {
         "label": "Sans Livraison",
-        "id": 1
+        "id": 1,
+        "price": 15.0
       },
       {
         "label": "Avec livraison",
-        "id": 2
+        "id": 2,
+        "price": 15.0
       }
     ]
   }

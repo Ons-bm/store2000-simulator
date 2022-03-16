@@ -7,6 +7,7 @@ const Buttons = ({
   finalData,
 }) => {
   const result = finalData.concat(resultData);
+
   const Result = () => {
     setTabActive(step);
     setFinalData(result);
@@ -18,7 +19,6 @@ const Buttons = ({
     const email = resultData[4].substring(resultData[4].indexOf(":") + 1);
     const emailMsg = result.join("\n");
 
-    console.log("call", email);
     axios
       .post("http://localhost:3000/api/email", { email, emailMsg })
       .then((res) => {
